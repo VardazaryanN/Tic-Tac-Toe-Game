@@ -1,0 +1,109 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+
+}
+body{
+	width: 100%;
+	height: 100vh;
+	
+	background: linear-gradient(rgba(0,0,0,0.4), transparent 1px),
+				linear-gradient(90deg, rgba(0,0,0,0.4), transparent 1px);
+	background-size: 30px 30px;
+}
+.game{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+#res{
+	color: green;
+	font-weight: bold;
+	font-size: 40px;
+	font-family: Arial;
+	height: 50px;
+}
+.board{
+	width: 0;
+	height: 0;
+	display: none;
+  	flex-wrap: wrap;
+  	justify-content: center;
+  	align-items: center;
+	
+
+}
+
+.board .oneSquare{
+	width: 50px;
+	height: 50px;
+	border: 2px solid #333;
+	cursor: pointer;
+	font-size: 60px;
+	line-height: 30px;
+	text-align: center;
+}
+
+p{
+	font-size: 35px;
+	
+}
+#myInp{
+	width: 45px;
+	background: rgb(247, 252, 251);
+	color: rgb(0, 140, 255);
+	border: 1px solid rgb(0, 140, 255);
+	border-radius: .5rem;
+	font-size: 20px;
+	padding: .5rem;
+}
+#myBtn{
+	background: rgb(0, 140, 255);
+	color: rgb(247, 252, 251);
+	font-size: 20px;
+	margin-top: 20px;
+	padding: .5rem;
+	border-radius: 1rem;
+	cursor: pointer;
+}
+#myBtn:hover{
+	background: rgb(247, 252, 251);
+	color: rgb(0, 140, 255);
+	border: 1px solid rgb(0, 140, 255);
+}
+.new-game{
+	background: yellow;
+	color: #666;
+	font-size: 30px;
+	margin-top: 30px;
+	padding: 1rem;
+	border-radius: 1rem;
+	cursor: pointer;
+	display: none;
+}
+.new-game:hover{
+	background: transparent;
+	border: 2px solid yellow;
+	height: 67px;
+}
+
+#my-canvas{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100000;
+	visibility: hidden;
+	background: transparent;
+}
+#my-canvas.active{
+	visibility: visible;
+}
